@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>    
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            display: flex;
+            margin: 0 5px 5px 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>plotis</p>
+        <div id="plotis"></div>
+    </div>
+    <div>
+        <p>aukstis</p>
+        <div id="aukstis"></div>
+    </div>
+    <div>
+        <p>perimetras</p>
+        <div id="perimetras"></div>
+    </div>
+    <div>
+        <p>plotas</p>
+        <div id="plotas"></div>
+    </div>
+    <div>
+        <p>istrizaine</p>
+        <div id="istrizaine"></div>
+    </div>
     <script>        
         var plotis = 100;
-        var aukstis = 50;        
+        var aukstis = 50;
         alert('kintamojo "plotis" reikšmė yra ' + plotis);
         alert('kintamojo "aukstis" reikšmė yra ' + aukstis);
         alert('perimetras yra ' + (plotis + aukstis) * 2);
         alert('plotas yra ' + aukstis * plotis);
         alert('istrizaine yra ' + Math.sqrt(aukstis * aukstis + plotis * plotis));
-        
+        document.getElementById("plotis").innerHTML = plotis;
+        document.getElementById("aukstis").innerHTML = aukstis;
+        document.getElementById("perimetras").innerHTML = (plotis + aukstis) * 2;
+        document.getElementById("plotas").innerHTML = aukstis * plotis;
+        document.getElementById("istrizaine").innerHTML = Math.sqrt(aukstis * aukstis + plotis * plotis);
     </script>
-</head>
-<body>
-    <script>
-    document.getElementById("istrizaine1").innerHTML = istrizaine;
-    </script>
-    <div id="plotis1"></div>
-    <div id="aukstis1"></div>
-    <div id="perimetras1"></div>
-    <div id="plotas1"></div>
-    <p id="istrizaine1"></p>
 </body>
+
 </html>
